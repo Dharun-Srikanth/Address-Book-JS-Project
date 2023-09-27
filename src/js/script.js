@@ -37,8 +37,7 @@ const loadContacts = () => {
     }
     if (contactDiv) contactDiv.innerHTML = div;
     if (contactViewed) {
-      // window.location.href = "pages/contacts.html";  Localhost
-      window.location.href = "pages/contacts";
+      window.location.href = "pages/contacts.html";
       contactViewed = false;
     }
   }
@@ -52,7 +51,7 @@ if (addBtn) {
   addBtn.addEventListener("click", () => {
     if (name.value !== "" && num.value !== "") {
       contactData = JSON.parse(localStorage.getItem("contactArray"));
-      contactData.push({ id: randomID, name: name.value, num: num.value });
+      contactData.push({ id: randomID(), name: name.value, num: num.value });
       localStorage.setItem("contactArray", JSON.stringify(contactData));
       name.value = "";
       num.value = "";
@@ -71,8 +70,8 @@ if (contactPageBtn) {
 // Back Button (Contacts page)
 if (backBtn) {
   backBtn.addEventListener("click", () => {
-    // window.location.href = "http://127.0.0.1:5500/index.html";   LocalHost
-    window.location.href = "https://dharun-srikanth.github.io/Address-Book-JS-Project/index.html";
+    // window.location.href = "http://127.0.0.1:5500/index.html";
+    window.location.href = "https://dharun-srikanth.github.io/Address-Book-JS-Project/index";
   });
 }
 
@@ -134,6 +133,7 @@ delBtn.forEach((btn) => {
       1
     );
     localStorage.setItem("contactArray", JSON.stringify(existingEntries));
+    loadContacts();
     location.reload();
   });
 });
