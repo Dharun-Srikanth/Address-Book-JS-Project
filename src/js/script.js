@@ -37,7 +37,8 @@ const loadContacts = () => {
     }
     if (contactDiv) contactDiv.innerHTML = div;
     if (contactViewed) {
-      window.location.href = "pages/contacts.html";
+      // window.location.href = "pages/contacts.html";  Localhost
+      window.location.href = "pages/contacts";
       contactViewed = false;
     }
   }
@@ -132,7 +133,6 @@ delBtn.forEach((btn) => {
       1
     );
     localStorage.setItem("contactArray", JSON.stringify(existingEntries));
-    loadContacts();
     location.reload();
   });
 });
