@@ -72,7 +72,7 @@ if (contactPageBtn) {
 if (backBtn) {
   backBtn.addEventListener("click", () => {
     // window.location.href = "http://127.0.0.1:5500/index.html";   LocalHost
-    window.location.href = "https://dharun-srikanth.github.io/Address-Book-JS-Project/";
+    window.location.href = "https://dharun-srikanth.github.io/Address-Book-JS-Project/index.html";
   });
 }
 
