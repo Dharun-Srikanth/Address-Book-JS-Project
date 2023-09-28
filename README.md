@@ -1,5 +1,5 @@
 # Address-Book-JS-Project
-
+<pre>
 Concepts Used:
     -> LocalStorage
         -> To Store = "localStorage.setItem("key",JSON.stringify(value))"
@@ -13,6 +13,7 @@ Concepts Used:
     -> window.location.href (to redirect page)
     -> location.reload()
     -> addEventListener()
+</pre>
 
     
 Live Demo:  https://dharun-srikanth.github.io/Address-Book-JS-Project/
